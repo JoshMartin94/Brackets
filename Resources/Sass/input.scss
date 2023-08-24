@@ -98,35 +98,12 @@ header {
 		}
 	}
 }
-
-
+/*--------------- HOME PAGE STYLING -------------*/
 .layout-body {
 	background-image: url(../Images/_000c3cf6-40aa-444a-9169-82e9170d9594.jpeg);
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-}
-
-
-.greeting {
-	text-align: center;
-	padding: 1em;
-	
-	button {
-		padding: 0.5em 3em;
-		font-size: 24px;
-		background-color: $background;
-		border: none;
-		border-radius: 0.3em;
-		margin: .5em 1em;
-		filter: drop-shadow(1px 7px 4px rgba(0, 0, 0, 0.604));
-		
-		&:hover {
-			cursor: pointer;
-			background-color: $background-dark;
-			color: $red;
-		}
-	}
 }
 
 .layout-container {
@@ -138,7 +115,8 @@ header {
 }
 
 
-.container {
+.login-window {
+	display: none;
 	background-color: $background;
 	padding: 2em 3em;
 	border-radius: 1em;
@@ -154,14 +132,14 @@ header {
 }
 
 
-.container .form__message--error {
+.login-window .form__message--error {
 	color: $red;
 	font-weight: 600;
 	margin: .5em 0 .5em;
 }
 
 
-.container .form__input {
+.login-window .form__input {
 	border-radius: 0.3em;
 	border: none;
 	margin: 0.5em 0;
@@ -172,13 +150,13 @@ header {
 }
 
 
-.container .form__input-error-message {
+.login-window .form__input-error-message {
 	color: $red;
 	margin: 1em 0;
 }
 
 
-.container button {
+.login-window button {
 	text-align: center;
 	display: flex;
 	margin: 1em auto;
@@ -195,19 +173,60 @@ header {
 }
 
 
-.container a {
+.login-window a {
 	color: black;
 	text-decoration: none;
 }
 
 
-.container a:hover {
+.login-window a:hover {
 	color: $red;
 	cursor: pointer;
 }
 
 
-.container .form__input-error-message {
+.login-window .form__input-error-message {
 	color: $red;
 	margin: 1em 0;
+}
+/*-------------- BRACKETS STYLING ------------*/
+.container-team-score {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 3em 0;
+	
+	@include tab {
+		justify-content: space-between;
+		padding: 6em calc((100vw - 1200px)/2);
+	}
+}
+
+.team-score {
+	text-align: center;
+	padding: 1em;
+	background-color: #ffa50057;
+	margin: 1em;
+	border-radius: 0.5em;
+	
+	@include tab {
+		width: 41%;
+		max-width: 30em;
+	}
+	
+	button {
+		padding: 0.5em 3em;
+		font-size: 24px;
+		background-color: $background;
+		border: none;
+		border-radius: 0.3em;
+		margin: .5em 1em;
+		filter: drop-shadow(1px 7px 4px rgba(0, 0, 0, 0.604));
+		
+		&:hover {
+			cursor: pointer;
+			background-color: $background-dark;
+			color: $red;
+		}
+	}
 }
